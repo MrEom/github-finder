@@ -11,7 +11,7 @@ export const GithubProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   //키워드로 유저찾기
-  const searhUsers = (text) => {
+  const searchUsers = (text) => {
     setLoading(true);
     const params = new URLSearchParams({ q: text });
     fetch(`${GITHUB_URL}/search/users?${params}`, {
@@ -31,7 +31,7 @@ export const GithubProvider = ({ children }) => {
       value={{
         users,
         loading,
-        searhUsers,
+        searchUsers,
       }}
     >
       {children}

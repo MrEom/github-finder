@@ -3,7 +3,7 @@ import Spinner from "../components/layout/Spinner";
 import UserItem from "./UserItem";
 import GithubContext from "../context/github/GithubContext";
 
-function UserResults() {
+function UserResult() {
   const { users, loading } = useContext(GithubContext);
 
   if (!loading) {
@@ -19,4 +19,4 @@ function UserResults() {
   }
 }
 
-export default UserResults;
+export default UserResult;

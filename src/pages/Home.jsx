@@ -1,10 +1,10 @@
 import UserResult from "../users/UserResult";
 import UserSearch from "../users/UserSearch";
 
-function Home() {
+function Home({ handleAlert }) {
   return (
     <>
-      <UserSearch />
+      <UserSearch handleAlert={handleAlert} />
       <UserResult />
     </>
   );
